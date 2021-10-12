@@ -94,7 +94,7 @@
 /* collapse section */
 .filter-container {
 	position: absolute;
-    width: 330px;
+    width: 350px;
     top: 0px;
     z-index: 1;
 }
