@@ -148,14 +148,13 @@
 	padding: 8px;
 	font-size: 0.875em;
 	background-color: #e6e6e6;
-	text-transform: capitalize;
+	text-transform: uppercase;
 
 }
 
 .content > div:nth-child(2n) {
 	background-color: #CFD0D2;
 }
-
 
 .icon-div {
 	color: #000;
