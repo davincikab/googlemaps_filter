@@ -1,0 +1,389 @@
+[
+    {
+        "lat": 1.2963831817354887,
+        "long": 103.89102243487771,
+        "type": "meyermansion",
+        "tagline": "",
+        "title": "MEYER MANSION",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2769849290371602,
+        "long": 103.84563012881529,
+        "type": "work",
+        "tagline": "Work",
+        "title": "GUOCO TOWER",
+        "content": "Singapore’s tallest building is an iconic vertical city sitting above Tanjong Pagar MRT Station that houses shops, restaurants, offices and a hotel.",
+        "image": "images/locations/guoco-tower.jpg"
+    },
+    {
+        "lat": 1.2815897504636968,
+        "long": 103.86360247105294,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "GARDENS BY THE BAY",
+        "content": "Run or cycle to this spectacular national garden with ease while taking in the beautiful Marina Bay views.",
+        "image": "images/locations/gardens-by-the-bay.jpg"
+    },
+    {
+        "lat": 1.2806917243074056,
+        "long": 103.87111057104502,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "MARINA BARRAGE",
+        "content": "Picnic on the green roof of the Marina Barrage; or choose to kayak or dragonboat in the Marina Reservoir.",
+        "image": "images/locations/marina-barage.jpg"
+    },
+    {
+        "lat": 1.3348405239781378,
+        "long": 103.98336852878477,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "CHANGI JURASSIC MILE",
+        "content": "Singapore’s largest outdoor display of life-sized dinosaurs is less than an hour from Meyer Mansion on your bike or skates.",
+        "image": "images/locations/changi-jurassic-park.jpg"
+    },
+    {
+        "lat": 1.2929459981140015,
+        "long": 103.8775120999036,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "KEPPEL MARINA EAST DESALINATION PLANT",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2893042,
+        "long": 103.8609481,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "SINGAPORE FLYER",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2898041242555804,
+        "long": 103.85580587105096,
+        "type": "attraction",
+        "tagline": "Attraction",
+        "title": "ESPLANADE - THEATRES ON THE BAY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3032242980994317,
+        "long": 103.87287139990391,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "KALLANG WAVE MALL",
+        "content": "Shop, dine and play in a unique way with Singapore’s largest esports experience centre, first Japanese onsen, and indoor climbing wall in a mall.",
+        "image": ""
+    },
+    {
+        "lat": 1.3036306241770856,
+        "long": 103.90295937104585,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "KATONG V",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3054971934771415,
+        "long": 103.90484876307997,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "i12 KATONG",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3175624828715626,
+        "long": 103.89279375599939,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "PLQ",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2950489837826742,
+        "long": 103.85830488033777,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "SUNTEC CITY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3147220980833119,
+        "long": 103.89475539990502,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "KINEX",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.283547037857244,
+        "long": 103.86068783348985,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "MARINA BAY SANDS",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2996898146962643,
+        "long": 103.85611224591564,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "BUGIS JUNCTION",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3602296496709447,
+        "long": 103.9897485710605,
+        "type": "shopping",
+        "tagline": "Shopping",
+        "title": "JEWEL / CHANGI AIRPORT",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3039737720305862,
+        "long": 103.87702079989512,
+        "type": "sports",
+        "tagline": "Sports",
+        "title": "SINGAPORE SPORTS HUB / INDOOR STADIUM",
+        "content": "State-of-the-art fully integrated sports and lifestyle hub to swim, wall climb, kayak, canoe and watch world-class performances.",
+        "image": "images/locations/singapor-sports-hub-indoor-stadium.jpg"
+    },
+    {
+        "lat": 1.305616450207908,
+        "long": 103.93168972878034,
+        "type": "sports",
+        "tagline": "Sports",
+        "title": "SINGAPORE WAKE PARK",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3081195980929097,
+        "long": 103.9384755999076,
+        "type": "sports",
+        "tagline": "Sports",
+        "title": "XTREME SKATEPARK",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2971211503019728,
+        "long": 103.89981999992482,
+        "type": "eat_play",
+        "tagline": "Eat & Play",
+        "title": "COASTAL PLAYGROVE <small>(Previously Big Splash)</SMALL>",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.299209698104707,
+        "long": 103.90673509989821,
+        "type": "eat_play",
+        "tagline": "Eat & Play",
+        "title": "PARKLAND GREEN",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3017210502555991,
+        "long": 103.91285899992985,
+        "type": "eat_play",
+        "tagline": "Eat & Play",
+        "title": "MARINE COVE",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3152397501209225,
+        "long": 103.90903729991877,
+        "type": "hospital",
+        "tagline": "Hospital",
+        "title": "PARKWAY EAST HOSPITAL",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3007949241833239,
+        "long": 103.91218659991473,
+        "type": "park",
+        "tagline": "Park",
+        "title": "EAST COAST PARK",
+        "content": "Singapore’s iconic and well-loved beach where the family can picnic, barbeque, cycle, skate or simply enjoy the sea breeze.",
+        "image": "images/locations/east-coast-park.jpg"
+    },
+    {
+        "lat": 1.2964004981087902,
+        "long": 103.88813029990283,
+        "type": "park",
+        "tagline": "Park",
+        "title": "KATONG PARK",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3002725075211077,
+        "long": 103.89242198968145,
+        "type": "education",
+        "tagline": "Education",
+        "title": "BRIGHTON MONTESSORI <small>(Fort Road)</small>",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3085101200285845,
+        "long": 103.87894635751121,
+        "type": "education",
+        "tagline": "Education",
+        "title": "ETON PRESCHOOL <small>(Mountbatten)</SMALL>",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.307222936280767,
+        "long": 103.90933200129005,
+        "type": "education",
+        "tagline": "Education",
+        "title": "ODYSSEY PRESCHOOL <small>(Still Road South)</SMALL>",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.30678561014558,
+        "long": 103.91088009821897,
+        "type": "education",
+        "tagline": "Education",
+        "title": "CHIJ KATONG PRIMARY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3049273502323773,
+        "long": 103.91142327105857,
+        "type": "education",
+        "tagline": "Education",
+        "title": "TAO NAN SCHOOL",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3056969809838173,
+        "long": 103.91732948192977,
+        "type": "education",
+        "tagline": "Education",
+        "title": "NGEE ANN PRIMARY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2991182981241218,
+        "long": 103.88214984217656,
+        "type": "education",
+        "tagline": "Education",
+        "title": "DUNMAN HIGH",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.305358467798516,
+        "long": 103.89153877099056,
+        "type": "education",
+        "tagline": "Education",
+        "title": "CHUNG CHENG HIGH <small>(Main)</SMALL>",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3084844105140343,
+        "long": 103.89773584853998,
+        "type": "education",
+        "tagline": "Education",
+        "title": "TANJONG KATONG SECONDARY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3081723241414602,
+        "long": 103.89646199991125,
+        "type": "education",
+        "tagline": "Education",
+        "title": "TANJONG KATONG GIRLS' SCHOOL",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3065824724251214,
+        "long": 103.91689627235118,
+        "type": "education",
+        "tagline": "Education",
+        "title": "CHIJ KATONG CONVENT",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3082189980919678,
+        "long": 103.91703639990347,
+        "type": "education",
+        "tagline": "Education",
+        "title": "ST. PATRICK’S SECONDARY",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3060806241540466,
+        "long": 103.91987189991016,
+        "type": "education",
+        "tagline": "Education",
+        "title": "VICTORIA JUNIOR COLLEGE",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3037717418522525,
+        "long": 103.89716430917835,
+        "type": "education",
+        "tagline": "Education",
+        "title": "CANADIAN INTERNATIONAL SCHOOL",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.2980898,
+        "long": 103.8855871,
+        "type": "mrt",
+        "tagline": "MRT Station",
+        "title": "KATONG PARK (TE24) (U/C)",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.299438,
+        "long": 103.8974731,
+        "type": "mrt",
+        "tagline": "MRT Station",
+        "title": "TANJONG KATONG (TE25) (U/C)",
+        "content": "",
+        "image": ""
+    },
+    {
+        "lat": 1.3027611,
+        "long": 103.9050362,
+        "type": "mrt",
+        "tagline": "MRT Station",
+        "title": "MARINE PARADE (TE26) (U/C)",
+        "content": "",
+        "image": ""
+    }
+]

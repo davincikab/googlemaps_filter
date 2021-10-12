@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<!-- COMMON META TAG -->
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="format-detection" content="telephone=no">
+	<title>Singapore Map</title>
+
+	<meta name="theme-color" content="#0085CA">
+
+	<!-- GOOGLE FONTS CSS -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+	<!-- MAP STYLE CSS -->
+	<link rel="stylesheet" href="css/map-style.css" type="text/css">
+
+</head>
+<body>
+	<div class="main-container">
+		<div class="filter-container">
+			<div class="filter-item">
+				<button class="collapsible"> 
+					Area location
+				</button>
+				<div class="content" id="area-container">
+				</div>
+			</div>
+			<div class="filter-item">
+				<button class="collapsible"> 
+					Category
+				</button>
+				<div class="content" id="category-container">
+				</div>
+			</div>
+
+			<div class="filter-item">
+				<button class="collapsible"> 
+					Route
+				</button>
+				<div class="content" id="route-container">
+				</div>
+			</div>			
+		</div>
+		<div id="map"></div>
+	</div>
+	<!-- JQUERY LIBRARY JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- GOOGLE MAP JS
+	LOCALHOST: AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg
+	DEV: AIzaSyBUJDR7tKwK30TfLZyKxJ0G59kzWefuhVs -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBUJDR7tKwK30TfLZyKxJ0G59kzWefuhVs&libraries=&v=weekly&channel=2"
+      async
+    ></script>
+
+	<!-- INFOBUBBLE JS -->
+    <script src="js/infobubble-compiled.js" async></script>
+
+	<!-- MAP CONFIG JS -->
+    <script src="js/map-config.js" async></script>
+	
+
+</body>
+</html>
