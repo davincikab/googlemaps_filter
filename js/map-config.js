@@ -2732,65 +2732,77 @@ function initMap() {
 		const categoryFilter = [
 			{ 
 				name:"meyermansion",
+                label:"Meyer Mansion",
 				icon: 'images/icons/meyermansion-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"work",
+                label:"Work",
 				icon: 'images/icons/work-marker.png',
 				checked:true,
 				color:""
 			},
-			{ name:"attraction",
+			{ 
+                name:"attraction",
+                label:"Attraction",
 				icon: 'images/icons/attraction-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"museum",
+                label:"Museum",
 				icon: 'images/icons/museum-marker.png',
 				checked:true,
 				color:""
 			},
 			{  
 				name:"shopping",
+                label:"Shopping",
 				icon: 'images/icons/shopping-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"sports",
+                label:"Sports",
 				icon: 'images/icons/sports-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"eat_play",
+                label:"Eat Play",
 				icon: 'images/icons/eat-play-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"hospital",
+                label:"Hospital",
 				icon: 'images/icons/hospital-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"park",
+                label:"Park",
 				icon: 'images/icons/park-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"education",
+                label:"Education",
 				icon: 'images/icons/education-marker.png',
 				checked:true,
 				color:""
 			},
 			{ 
 				name:"mrt",
+                label:"Mrt",
 				icon: 'images/icons/mrt-marker.png',
 				checked:true,
 				color:""
@@ -2800,7 +2812,7 @@ function initMap() {
 		var categoryFilterContainer = document.getElementById("category-container");
 		let categoryList = categoryFilter.map(category => {
 			return `<div class="category-filter" data-type="${category}">
-					<div class="category-checkbox checked" data-image="${category.icon}" id="${category.name}" style="background-image:url(${category.icon})"></div>${category.name}
+					<div class="category-checkbox checked" data-image="${category.icon}" id="${category.name}" style="background-image:url(${category.icon})"></div>${category.label}
 				</div>`;
 		});
 
@@ -2862,6 +2874,8 @@ function initMap() {
 		var routeFilter = [
 			{name:'Route One', layer:lineOne, checked:true, color:'#4CA874'},
 			{name:'Route Two', layer:lineTwo, checked:true, color:'#EDA73D'},
+            {name:'Route Three', layer:lineThree, checked:true, color:'#EDA73D'},
+            {name:'Route Four', layer:lineFour, checked:true, color:'#EDA73D'},
 		];
 
 		let routeList = routeFilter.map(route => {

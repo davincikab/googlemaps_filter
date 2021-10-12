@@ -1,7 +1,7 @@
 /* common */
 *{
 	margin:0 auto;
-	font-family: 'Brown';
+	font-family:opensans,  sans-serif ;
 }
 
 /* map */
@@ -97,6 +97,7 @@
     width: 330px;
     top: 0px;
     z-index: 1;
+	font-weight: 600;
 }
 
 .collapsible {
@@ -107,9 +108,11 @@
 	text-align: left;
 	outline: none;
 	font-size: 15px;
+	font-weight: 700;
 	background-color: #efefef;
     padding: 10px 15px;
 	border-radius: 0px;
+	font-family: 'Poppins', sans-serif;;
   }
 
   .filter-item:first-child > .collapsible {
@@ -145,8 +148,10 @@
 .content > div {
 	cursor: pointer;
 	padding: 8px;
+	font-size: 14px;
 	background-color: #e6e6e6;
 	text-transform: capitalize;
+	font-family: 'Poppins', sans-serif;
 }
 
 .content > div:nth-child(2n) {
