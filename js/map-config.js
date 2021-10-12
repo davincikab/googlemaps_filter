@@ -23,7 +23,9 @@ function initMap() {
         disableDefaultUI: true, // a way to quickly hide all controls
         clickableIcons: false,
         //styles: mapStyles
-        mapId: '619a1687d5fcb872'
+        mapId: '619a1687d5fcb872',
+        zoomControl:true,
+        streetViewControl:true
     });
 
     // ADD MARKERS ON MAP.
@@ -2697,6 +2699,14 @@ function initMap() {
         });
     });
 
+    // zoom to meyer mansion
+    let meyerButton = document.getElementById("icon-div");
+    meyerButton.onclick = function(e) {
+        map.panTo(
+            {lat:1.2963831817354887, lng:103.89102243487771}
+        )
+    }
+
     // collapse sections
     var coll = document.getElementsByClassName("collapsible");
 		var activeContent = null;
@@ -2731,13 +2741,6 @@ function initMap() {
 		// 
 		const categoryFilter = [
 			{ 
-				name:"meyermansion",
-                label:"Meyer Mansion",
-				icon: 'images/icons/meyermansion-marker.png',
-				checked:true,
-				color:""
-			},
-			{ 
 				name:"work",
                 label:"Work",
 				icon: 'images/icons/work-marker.png',
@@ -2751,20 +2754,14 @@ function initMap() {
 				checked:true,
 				color:""
 			},
-			{ 
-				name:"museum",
-                label:"Museum",
-				icon: 'images/icons/museum-marker.png',
-				checked:true,
-				color:""
-			},
-			{  
+            {  
 				name:"shopping",
                 label:"Shopping",
 				icon: 'images/icons/shopping-marker.png',
 				checked:true,
 				color:""
 			},
+			
 			{ 
 				name:"sports",
                 label:"Sports",
@@ -2774,7 +2771,7 @@ function initMap() {
 			},
 			{ 
 				name:"eat_play",
-                label:"Eat Play",
+                label:"Eat & Play",
 				icon: 'images/icons/eat-play-marker.png',
 				checked:true,
 				color:""
@@ -2788,7 +2785,7 @@ function initMap() {
 			},
 			{ 
 				name:"park",
-                label:"Park",
+                label:"Parks",
 				icon: 'images/icons/park-marker.png',
 				checked:true,
 				color:""
@@ -2797,6 +2794,13 @@ function initMap() {
 				name:"education",
                 label:"Education",
 				icon: 'images/icons/education-marker.png',
+				checked:true,
+				color:""
+			},
+            { 
+				name:"museum",
+                label:"Museum",
+				icon: 'images/icons/museum-marker.png',
 				checked:true,
 				color:""
 			},
@@ -2872,19 +2876,19 @@ function initMap() {
 		// var lineOne, lineTwo;
 		var routeContainer = document.getElementById("route-container");
 		var routeFilter = [
-			{name:'Route One', layer:lineOne, checked:true, color:'#4CA874'},
-			{name:'Route Two', layer:lineTwo, checked:true, color:'#EDA73D'},
-            {name:'Route Three', layer:lineThree, checked:true, color:'#EDA73D'},
-            {name:'Route Four', layer:lineFour, checked:true, color:'#EDA73D'},
+			{name:'PARK CONNECTOR NETWORK (PCN)', layers:[lineOne, lineFour], checked:true, color:'#4CA874'},
+			{name:'CYCLING ROUTE (VIA PCN)', layers:[lineTwo, lineThree], checked:true, color:'#EDA73D'}
 		];
 
 		let routeList = routeFilter.map(route => {
 			return `<div class="category-filter" data-type="${route}">
-						<div class="route-checkbox checked" id="${route.name}" style="background-color:${route.color}"></div>${route.name}
-					</div>`;
+					<div class="route-checkbox checked" id="${route.name}" style="border-color:${route.color}"></div>${route.name}
+				</div>`;
 		});
 
-		routeContainer.innerHTML = routeList.join("");
+        categoryFilterContainer.innerHTML += routeList.join("");
+		// routeContainer.innerHTML = routeList.join("");
+
 		var routeElements = document.querySelectorAll('.route-checkbox');
 		routeElements.forEach(routeElement => {
 			routeElement.onclick = function(e) {
@@ -2892,14 +2896,14 @@ function initMap() {
 				let route = routeFilter.find(entry => entry.name == id);
 
 				if(e.target.classList.contains('checked')) {
-					routeElement.style.backgroundColor = "transparent";
+					routeElement.style.borderColor = "gray";
 
-					route.layer.setMap(null);
+					route.layers.forEach(layer => layer.setMap(null));
 					e.target.classList.remove('checked');
 				} else {
-					routeElement.style.backgroundColor = route.color;
+					routeElement.style.borderColor = route.color;
 
-					route.layer.setMap(map);
+					route.layers.forEach(layer => layer.setMap(map));
 					e.target.classList.add('checked');
 				}
 			}
@@ -2912,13 +2916,13 @@ function initMap() {
 		// bermudaTriangle6, bermudaTriangle7, bermudaTriangle8, bermudaTriangle9, bermudaTriangle10, bermudaTriangle11;
 
 		var areaFilters = [
-			{layer:bermudaTriangle3, label:"Bermuda Triangle 3", name:"bermudaTriangle3", color:"#cadfcc"},
-			{layer:bermudaTriangle4, label:"Bermuda Triangle 4", name:"bermudaTriangle4", color:"#cab59f"},
-			{layer:bermudaTriangle5, label:"Bermuda Triangle 5", name:"bermudaTriangle5", color:"#c6ba91"},
-			{layer:bermudaTriangle6, label:"Bermuda Triangle 6", name:"bermudaTriangle6", color:"#9fbaaf"},
-			{layer:bermudaTriangle7, label:"Bermuda Triangle 7", name:"bermudaTriangle7", color:"#f9d3be"},
-			{layer:bermudaTriangle8, label:"Bermuda Triangle 8", name:"bermudaTriangle8", color:"#d8aea7"},
-			{layer:bermudaTriangle9, label:"Bermuda Triangle 9", name:"bermudaTriangle9", color:"#f8c1a4"},
+			{layer:bermudaTriangle3, label:"PAYA LEBAR QUARTER", name:"bermudaTriangle3", color:"#cadfcc"},
+			{layer:bermudaTriangle4, label:"SUNTEC CONVENTION & EXHIBITION CENTRE", name:"bermudaTriangle4", color:"#cab59f"},
+			{layer:bermudaTriangle5, label:"MARINA BAY FINANCIAL CENTRE (MBFC)", name:"bermudaTriangle5", color:"#c6ba91"},
+			{layer:bermudaTriangle6, label:"TANJONG PAGAR", name:"bermudaTriangle6", color:"#9fbaaf"},
+			{layer:bermudaTriangle7, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", name:"bermudaTriangle7", color:"#f9d3be"},
+			{layer:bermudaTriangle8, label:"RAFFLES PLACE", name:"bermudaTriangle8", color:"#d8aea7"},
+			{layer:bermudaTriangle9, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle9", color:"#f8c1a4"},
 			{layer:bermudaTriangle10, label:"Bermuda Triangle 10", name:"bermudaTriangle10", color:"#fbdbb3"},
 			{layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
 		];

@@ -1,7 +1,7 @@
 /* common */
 *{
 	margin:0 auto;
-	font-family:opensans,  sans-serif ;
+	font-family: 'Open Sans', sans-serif;
 }
 
 /* map */
@@ -97,7 +97,6 @@
     width: 330px;
     top: 0px;
     z-index: 1;
-	font-weight: 600;
 }
 
 .collapsible {
@@ -107,12 +106,10 @@
 	border: none;
 	text-align: left;
 	outline: none;
-	font-size: 15px;
-	font-weight: 700;
+	font-size: 1em;
 	background-color: #efefef;
     padding: 10px 15px;
 	border-radius: 0px;
-	font-family: 'Poppins', sans-serif;;
   }
 
   .filter-item:first-child > .collapsible {
@@ -131,6 +128,7 @@
 	font-weight: bold;
 	float: right;
 	margin-left: 5px;
+	font-size: 12px;
   }
   
   .active:after {
@@ -148,10 +146,10 @@
 .content > div {
 	cursor: pointer;
 	padding: 8px;
-	font-size: 14px;
+	font-size: 0.875em;
 	background-color: #e6e6e6;
 	text-transform: capitalize;
-	font-family: 'Poppins', sans-serif;
+
 }
 
 .content > div:nth-child(2n) {
@@ -159,7 +157,27 @@
 }
 
 
-.area-checkbox, .category-checkbox, .route-checkbox {
+.icon-div {
+	color: #000;
+	cursor: pointer;
+	width: 100%;
+	border: none;
+	text-align: left;
+	outline: none;
+	font-size: 15px;
+	background-color: #efefef;
+    padding: 10px 15px;
+	border-radius: 0px;
+
+	display: flex;
+	align-items: center;
+}
+
+.icon-div img, .icon-div div {
+	margin:0 10px 0 0;
+}
+
+.area-checkbox, .category-checkbox {
 	vertical-align: top;
     border: 1px solid rgba(152,140,136,0.4);
     position: relative;
@@ -172,7 +190,25 @@
 	cursor: pointer;
 }
 
+.route-checkbox {
+	display: inline-block;
+    border: 2px dotted green;
+    border: 2px 0px;
+	border-left: 0px;
+	border-right: 0px;
+    height: 0px;
+    border-radius: 0;
+    width: 35px;
+	margin-right: 5px;
+}
+
 .category-checkbox {
 	background-clip: content-box;
     background-size: cover;
+}
+
+@media screen and (max-width:480px) {
+	.filter-container {
+		width:100%;
+	}
 }
