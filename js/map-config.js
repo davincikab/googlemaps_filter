@@ -2824,54 +2824,60 @@ function initMap() {
 
 
 		// add event listener
-		var categoryElements = document.querySelectorAll(".category-checkbox");
-		categoryElements.forEach(categoryElement => {
-			categoryElement.onclick = function(e) {
-				let { id, dataset:{ image } } = e.target;
+        setTimeout(() => {
+            var categoryElements = document.querySelectorAll(".category-checkbox");
+            console.log(categoryElements);
+            
+            categoryElements.forEach(categoryElement => {
+                categoryElement.onclick = function(e) {
+                    let { id, dataset:{ image } } = e.target;
+                    console.log("Clicked");
 
-				if(e.target.classList.contains('checked')) {
-					e.target.classList.toggle('checked');
+                    if(e.target.classList.contains('checked')) {
+                        e.target.classList.toggle('checked');
 
-					e.target.style.backgroundImage = "none";
-					// remove the category from map
-					categoryFilter.forEach(cFilter => {
-						if(cFilter.name == id) {
-							cFilter.checked = false;
-						}
+                        e.target.style.backgroundImage = "none";
+                        // remove the category from map
+                        categoryFilter.forEach(cFilter => {
+                            if(cFilter.name == id) {
+                                cFilter.checked = false;
+                            }
 
-						return cFilter;
-					});
+                            return cFilter;
+                        });
 
-				} else {
-					e.target.classList.toggle('checked');
+                    } else {
+                        e.target.classList.toggle('checked');
 
-					e.target.style.backgroundImage = `url(${image})`;
-					// add the category to map
-					categoryFilter.forEach(cFilter => {
-						if(cFilter.name == id) {
-							cFilter.checked = true;
-						}
+                        e.target.style.backgroundImage = `url(${image})`;
+                        // add the category to map
+                        categoryFilter.forEach(cFilter => {
+                            if(cFilter.name == id) {
+                                cFilter.checked = true;
+                            }
 
-						return cFilter;
-					});
+                            return cFilter;
+                        });
 
-				}
+                    }
 
-				markers = JSON.parse(JSON.stringify(allMarkers));
-				let activeCategories = categoryFilter.filter(catFilter => catFilter.checked).map(catFilter => catFilter.name);
+                    markers = JSON.parse(JSON.stringify(allMarkers));
+                    let activeCategories = categoryFilter.filter(catFilter => catFilter.checked).map(catFilter => catFilter.name);
 
-				console.log(activeCategories);
-				mapMarkers.forEach(marker => {
-					if(activeCategories.indexOf(marker.getTitle()) != -1) {
-						return marker.setMap(map);
-					}
+                    console.log(activeCategories);
+                    mapMarkers.forEach(marker => {
+                        if(activeCategories.indexOf(marker.getTitle()) != -1) {
+                            return marker.setMap(map);
+                        }
 
-					return marker.setMap(null);
-				});
+                        return marker.setMap(null);
+                    });
 
 
-			}
-		});
+                }
+            });
+
+        }, 2000);
 
 		// var lineOne, lineTwo;
 		var routeContainer = document.getElementById("route-container");
