@@ -209,6 +209,7 @@
 .category-checkbox {
 	background-clip: content-box;
     background-size: cover;
+	background-color: transparent;
 }
 
 @media screen and (max-width:480px) {
