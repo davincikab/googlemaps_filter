@@ -178,7 +178,8 @@
 .icon-div img, .icon-div div {
 	margin: 0 10px 0 0;
     font-size: 1em;
-    font-weight: normal;
+    font-weight: bold;
+
 }
 
 .area-checkbox, .category-checkbox {

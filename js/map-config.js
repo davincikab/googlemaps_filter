@@ -10,15 +10,15 @@ $.getJSON('json/styles.json', function(data){
 function initMap() {
 
     // SET DEFAULT CENTER POSITION AND ZOOM OF MAP.
-    const center = new google.maps.LatLng(1.296327, 103.904521);
-    const zoom = 13;
+    const center = new google.maps.LatLng(1.2963831817354887, 103.89102243487771);
+    const zoom = 15;
 
     // CREATE CUSTOM STYLES ON: https://mapstyle.withgoogle.com/
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom,
         center,
         mapTypeId: "roadmap", // roadmap, satellite, hybrid, terrain
-        minZoom: zoom - 0,
+        minZoom: zoom - 2,
         //maxZoom: zoom + 0,
         disableDefaultUI: true, // a way to quickly hide all controls
         clickableIcons: false,
@@ -2666,7 +2666,7 @@ function initMap() {
         fillColor: "#fbdbb3",
         fillOpacity: 0.3
     });
-    bermudaTriangle10.setMap(map);
+    // bermudaTriangle10.setMap(map);
     bermudaTriangle10.addListener("mouseover", () => {
         bermudaTriangle10.setOptions({
             fillOpacity: 0.6
@@ -2687,7 +2687,7 @@ function initMap() {
         fillColor: "#F79C75",
         fillOpacity: 0.3
     });
-    bermudaTriangle11.setMap(map);
+    // bermudaTriangle11.setMap(map);
     bermudaTriangle11.addListener("mouseover", () => {
         bermudaTriangle11.setOptions({
             fillOpacity: 0.6
