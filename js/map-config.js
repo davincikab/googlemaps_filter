@@ -2749,7 +2749,7 @@ function initMap() {
 			},
 			{ 
                 name:"attraction",
-                label:"Attraction",
+                label:"Attractions",
 				icon: 'images/icons/attraction-marker.png',
 				checked:true,
 				color:""
@@ -2797,20 +2797,20 @@ function initMap() {
 				checked:true,
 				color:""
 			},
-            { 
-				name:"museum",
-                label:"Museum",
-				icon: 'images/icons/museum-marker.png',
-				checked:true,
-				color:""
-			},
-			{ 
-				name:"mrt",
-                label:"Mrt",
-				icon: 'images/icons/mrt-marker.png',
-				checked:true,
-				color:""
-			}
+            // { 
+			// 	name:"museum",
+            //     label:"Museum",
+			// 	icon: 'images/icons/museum-marker.png',
+			// 	checked:true,
+			// 	color:""
+			// },
+			// { 
+			// 	name:"mrt",
+            //     label:"Mrt",
+			// 	icon: 'images/icons/mrt-marker.png',
+			// 	checked:true,
+			// 	color:""
+			// }
 		];
 
 		var categoryFilterContainer = document.getElementById("category-container");
@@ -2929,8 +2929,8 @@ function initMap() {
 			{layer:bermudaTriangle7, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", name:"bermudaTriangle7", color:"#f9d3be"},
 			{layer:bermudaTriangle8, label:"RAFFLES PLACE", name:"bermudaTriangle8", color:"#d8aea7"},
 			{layer:bermudaTriangle9, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle9", color:"#f8c1a4"},
-			{layer:bermudaTriangle10, label:"Bermuda Triangle 10", name:"bermudaTriangle10", color:"#fbdbb3"},
-			{layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
+			// {layer:bermudaTriangle10, label:"Bermuda Triangle 10", name:"bermudaTriangle10", color:"#fbdbb3"},
+			// {layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
 		];
 
 		

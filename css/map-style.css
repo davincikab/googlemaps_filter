@@ -94,7 +94,7 @@
 /* collapse section */
 .filter-container {
 	position: absolute;
-    width: 350px;
+    width: 380px;
     top: 0px;
     z-index: 1;
 }
@@ -107,9 +107,11 @@
 	text-align: left;
 	outline: none;
 	font-size: 1em;
-	background-color: #efefef;
+	background-color: #a0a0a0;
     padding: 10px 15px;
 	border-radius: 0px;
+	font-weight: bold;
+	letter-spacing: 1px;
   }
 
   .filter-item:first-child > .collapsible {
@@ -145,11 +147,11 @@
 
 .content > div {
 	cursor: pointer;
-	padding: 8px;
+	padding: 8px 4px 8px 15px;
 	font-size: 0.875em;
 	background-color: #e6e6e6;
 	text-transform: uppercase;
-
+	letter-spacing: 1px;
 }
 
 .content > div:nth-child(2n) {
@@ -157,6 +159,7 @@
 }
 
 .icon-div {
+	letter-spacing: 1px;
 	color: #000;
 	cursor: pointer;
 	width: 100%;
@@ -174,6 +177,7 @@
 
 .icon-div img, .icon-div div {
 	margin:0 10px 0 0;
+	font-family: 15px;
 }
 
 .area-checkbox, .category-checkbox {
@@ -191,13 +195,13 @@
 
 .route-checkbox {
 	display: inline-block;
-    border: 2px dotted green;
+    border: 2px dashed green;
     border: 2px 0px;
 	border-left: 0px;
 	border-right: 0px;
     height: 0px;
     border-radius: 0;
-    width: 35px;
+    width: 25px;
 	margin-right: 5px;
 }
 
