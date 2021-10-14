@@ -2666,7 +2666,7 @@ function initMap() {
         fillColor: "#fbdbb3",
         fillOpacity: 0.3
     });
-    // bermudaTriangle10.setMap(map);
+    bermudaTriangle10.setMap(map);
     bermudaTriangle10.addListener("mouseover", () => {
         bermudaTriangle10.setOptions({
             fillOpacity: 0.6
@@ -2870,6 +2870,10 @@ function initMap() {
                             return marker.setMap(map);
                         }
 
+                        if(marker.getTitle() == "meyermansion" || marker.getTitle() == "mrt") {
+                            return marker.setMap(map);
+                        }
+
                         return marker.setMap(null);
                     });
 
@@ -2922,14 +2926,17 @@ function initMap() {
 		// bermudaTriangle6, bermudaTriangle7, bermudaTriangle8, bermudaTriangle9, bermudaTriangle10, bermudaTriangle11;
 
 		var areaFilters = [
-			{layer:bermudaTriangle3, label:"PAYA LEBAR QUARTER", name:"bermudaTriangle3", color:"#cadfcc"},
-			{layer:bermudaTriangle4, label:"SUNTEC CONVENTION & EXHIBITION CENTRE", name:"bermudaTriangle4", color:"#cab59f"},
-			{layer:bermudaTriangle5, label:"MARINA BAY FINANCIAL CENTRE (MBFC)", name:"bermudaTriangle5", color:"#c6ba91"},
-			{layer:bermudaTriangle6, label:"TANJONG PAGAR", name:"bermudaTriangle6", color:"#9fbaaf"},
-			{layer:bermudaTriangle7, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", name:"bermudaTriangle7", color:"#f9d3be"},
-			{layer:bermudaTriangle8, label:"RAFFLES PLACE", name:"bermudaTriangle8", color:"#d8aea7"},
-			{layer:bermudaTriangle9, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle9", color:"#f8c1a4"},
-			// {layer:bermudaTriangle10, label:"Bermuda Triangle 10", name:"bermudaTriangle10", color:"#fbdbb3"},
+            {layer:bermudaTriangle4, label:"PAYA LEBAR QUARTER", name:"bermudaTriangle4", color:"#cab59f"},
+			{layer:bermudaTriangle5, label:"SUNTEC CONVENTION & EXHIBITION CENTRE", name:"bermudaTriangle5", color:"#c6ba91"},
+			{layer:bermudaTriangle6, label:"MARINA BAY FINANCIAL CENTRE (MBFC)", name:"bermudaTriangle6", color:"#9fbaaf"},
+			{layer:bermudaTriangle7, label:"TANJONG PAGAR", name:"bermudaTriangle7", color:"#f9d3be"},
+			{layer:bermudaTriangle8, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", name:"bermudaTriangle8", color:"#d8aea7"},
+
+            
+			{layer:bermudaTriangle9, label:"RAFFLES PLACE", name:"bermudaTriangle9", color:"#f8c1a4"},
+			{layer:bermudaTriangle10, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle10", color:"#fbdbb3"},
+
+			{layer:bermudaTriangle3, label:"East Coast Park", name:"bermudaTriangle3", color:"#cadfcc"},
 			// {layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
 		];
 
