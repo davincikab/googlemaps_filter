@@ -2519,7 +2519,7 @@ function initMap() {
         fillColor: "#cadfcc",
         fillOpacity: 0.3
     });
-    bermudaTriangle3.setMap(map);
+    // bermudaTriangle3.setMap(map);
     bermudaTriangle3.addListener("mouseover", () => {
         bermudaTriangle3.setOptions({
             fillOpacity: 0.6
@@ -2936,7 +2936,7 @@ function initMap() {
 			{layer:bermudaTriangle9, label:"RAFFLES PLACE", name:"bermudaTriangle9", color:"#f8c1a4"},
 			{layer:bermudaTriangle10, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle10", color:"#fbdbb3"},
 
-			{layer:bermudaTriangle3, label:"East Coast Park", name:"bermudaTriangle3", color:"#cadfcc"},
+			// {layer:bermudaTriangle3, label:"East Coast Park", name:"bermudaTriangle3", color:"#cadfcc"},
 			// {layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
 		];
 
