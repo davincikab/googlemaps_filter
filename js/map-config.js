@@ -2519,6 +2519,7 @@ function initMap() {
         fillColor: "#cadfcc",
         fillOpacity: 0.3
     });
+    
     // bermudaTriangle3.setMap(map);
     bermudaTriangle3.addListener("mouseover", () => {
         bermudaTriangle3.setOptions({
@@ -2940,6 +2941,18 @@ function initMap() {
 			// {layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
 		];
 
+        // click functionality
+        var polygons = areaFilters.map(filter => filter.layer);
+        polygons.forEach(polygon => {
+            polygon.addListener("click", function(e) {
+                console.log(e);
+                let coordinates = {lat:e.latLng.lat(), lng:e.latLng.lng()};
+
+                map.panTo(coordinates);
+                
+                console.log("Click Event");
+            });
+        });
 		
 		let areaList = areaFilters.map(area => {
 			return `<div class="category-filter" data-type="${area}">
