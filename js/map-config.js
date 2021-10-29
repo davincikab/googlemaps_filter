@@ -2816,7 +2816,7 @@ function initMap() {
 
 		var categoryFilterContainer = document.getElementById("category-container");
 		let categoryList = categoryFilter.map(category => {
-			return `<div class="category-filter" data-type="${category}">
+			return `<div class="category-filter" data-type="${category.name}">
 					<div class="category-checkbox checked" data-image="${category.icon}" id="${category.name}" style="background-image:url(${category.icon})"></div>${category.label}
 				</div>`;
 		});
@@ -2892,7 +2892,7 @@ function initMap() {
 		];
 
 		let routeList = routeFilter.map(route => {
-			return `<div class="category-filter" data-type="${route}">
+			return `<div class="category-filter" data-type="${route.name}">
 					<div class="route-checkbox checked" id="${route.name}" style="border-color:${route.color}"></div>${route.name}
 				</div>`;
 		});
@@ -2927,15 +2927,15 @@ function initMap() {
 		// bermudaTriangle6, bermudaTriangle7, bermudaTriangle8, bermudaTriangle9, bermudaTriangle10, bermudaTriangle11;
 
 		var areaFilters = [
-            {layer:bermudaTriangle4, label:"PAYA LEBAR QUARTER", name:"bermudaTriangle4", color:"#cab59f"},
-			{layer:bermudaTriangle5, label:"SUNTEC CONVENTION & EXHIBITION CENTRE", name:"bermudaTriangle5", color:"#c6ba91"},
-			{layer:bermudaTriangle6, label:"MARINA BAY FINANCIAL CENTRE (MBFC)", name:"bermudaTriangle6", color:"#9fbaaf"},
-			{layer:bermudaTriangle7, label:"TANJONG PAGAR", name:"bermudaTriangle7", color:"#f9d3be"},
-			{layer:bermudaTriangle8, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", name:"bermudaTriangle8", color:"#d8aea7"},
+            {layer:bermudaTriangle4, label:"PAYA LEBAR QUARTER", center:{lat: 1.318338167448609, lng: 103.89497151019746}, name:"bermudaTriangle4", color:"#cab59f"},
+			{layer:bermudaTriangle5, label:"SUNTEC CONVENTION & EXHIBITION CENTRE", center:{lat: 1.2946116414402327, lng: 103.85852913190016}, name:"bermudaTriangle5", color:"#c6ba91"},
+			{layer:bermudaTriangle6, label:"MARINA BAY FINANCIAL CENTRE (MBFC)", center:{lat: 1.2779373692693394, lng: 103.8515381053457}, name:"bermudaTriangle6", color:"#9fbaaf"},
+			{layer:bermudaTriangle7, label:"TANJONG PAGAR", center:{lat: 1.2775226258386936, lng: 103.84375612117759}, name:"bermudaTriangle7", color:"#f9d3be"},
+			{layer:bermudaTriangle8, label:"SANDS EXPO & CONVENTION CENTRE (MBS)", center:{lat: 1.2829000081191806, lng: 103.85936299961935}, name:"bermudaTriangle8", color:"#d8aea7"},
 
             
-			{layer:bermudaTriangle9, label:"RAFFLES PLACE", name:"bermudaTriangle9", color:"#f8c1a4"},
-			{layer:bermudaTriangle10, label:"CHANGI BUSINESS PARK", name:"bermudaTriangle10", color:"#fbdbb3"},
+			{layer:bermudaTriangle9, label:"RAFFLES PLACE", center:{lat: 1.284201446051146, lng: 103.85007898102225}, name:"bermudaTriangle9", color:"#f8c1a4"},
+			{layer:bermudaTriangle10, label:"CHANGI BUSINESS PARK", center:{lat: 1.3353373199029406, lng: 103.96559778362248}, name:"bermudaTriangle10", color:"#fbdbb3"},
 
 			// {layer:bermudaTriangle3, label:"East Coast Park", name:"bermudaTriangle3", color:"#cadfcc"},
 			// {layer:bermudaTriangle11, label:"Bermuda Triangle 11", name:"bermudaTriangle11", color:"#F79C75"}
@@ -2943,19 +2943,20 @@ function initMap() {
 
         // click functionality
         var polygons = areaFilters.map(filter => filter.layer);
-        polygons.forEach(polygon => {
+        polygons.forEach((polygon, i) => {
             polygon.addListener("click", function(e) {
                 console.log(e);
                 let coordinates = {lat:e.latLng.lat(), lng:e.latLng.lng()};
 
+                console.log(areaFilters[i].label);
+                console.log(coordinates);
+
                 map.panTo(coordinates);
-                
-                console.log("Click Event");
             });
         });
 		
 		let areaList = areaFilters.map(area => {
-			return `<div class="category-filter" data-type="${area}">
+			return `<div class="category-filter area-filter" data-type="${area.name}">
 					<div class="area-checkbox checked" id="${area.name}" style="background-color:${area.color}"></div>${area.label}
 				</div>`;
 		});
@@ -2965,6 +2966,8 @@ function initMap() {
 		var areaElements = document.querySelectorAll('.area-checkbox');
 		areaElements.forEach(areaElement => {
 			areaElement.onclick = function(e) {
+                e.stopPropagation();
+
 				let { id } = e.target;
 				let area = areaFilters.find(entry => entry.name == id);
 
@@ -2987,4 +2990,23 @@ function initMap() {
 				}
 			}
 		});
+    
+
+    // click the category div and center to the map locaitons
+    var categoryDivs = document.querySelectorAll(".area-filter");
+
+    categoryDivs.forEach(categoryDiv => {
+        categoryDiv.addEventListener("click", function(e) {
+            let { target: { dataset:{ type }} } = e;
+
+            let areaFilter = areaFilters.find(areaFilter => areaFilter.name == type);
+
+            // zoom to polygon center
+            if(areaFilter) {
+                map.panTo(areaFilter.center);
+            }
+
+            // console.log("Category filter clicked", type);
+        });
+    });
 }
