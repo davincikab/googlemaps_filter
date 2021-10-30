@@ -2966,7 +2966,7 @@ function initMap() {
 		var areaElements = document.querySelectorAll('.area-checkbox');
 		areaElements.forEach(areaElement => {
 			areaElement.onclick = function(e) {
-                e.stopPropagation();
+                // e.stopPropagation();
 
 				let { id } = e.target;
 				let area = areaFilters.find(entry => entry.name == id);
@@ -2988,6 +2988,8 @@ function initMap() {
 					area.layer.setMap(map);
 					e.target.classList.add('checked')
 				}
+
+                map.panTo(area.center);
 			}
 		});
     
